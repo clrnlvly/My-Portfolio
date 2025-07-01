@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+ --hue: 217;
+ --sat: 85%;
+ --light: 74%;
+
+ --primary-color: hsl(var(--hue) var(--sat) var(--light));
+ --white-color: hsl(var(--hue) 45% 98%); /*white*/ 
+ --dark-color:  hsl(var(--hue) 26% 12%); /*dark*/
+
+ /*For dark and light theme*/
+ --color-01: hsl(var(--hue) var(--sat) var(--light)); /*primary to dark*/
+ --color-02: hsl(var(--hue) 45% 98%) ; /*white to dark*/
+ --color-03: hsl(var(--hue) 26% 12%) ; /*dark to white*/
+ --color-04: hsl(var(--hue)) 0% 62%; /*light-gray to dark-gray*/
+ --color-05: hsl(var(--hue)) 26% 12%; /*dark to primary*/
+
+ --body-color: hsl(250 26% 12%);
+ --hover-color: hsl(var(--hue) var(--sat) cal(var(--light) - 7%));
+
+ /*Background*/
+--bottom-nav-bg: hsl(var(--hue) 32% 25% / .65);
+--card-bg: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
+--modal-backdrop-bg: hsl(var(--hue) 54% 74% / .1);
+--footer-bg: linear-gradient(360deg, hsl(var(--hue) 54% 74% /.15), hsl(var(--hue) 54% 74% / .1));
+
+--scrollbar-color: hsl(var(--hue) 25% 20%);
+--scrollbar-thumb: hsl(var(--hue) var(--sat) var(--light));
+--scrollbar-thumb-hover: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+
+/*Typography*/
+--body-font-family: "Inter", sans-serif;
+
+--h1-font-size: 2.85rem;
+--h2-font-size: 2.25rem;
+--h3-font-size: 1.97rem;
+--h4-font-size: 1.43rem;
+--h5-font-size: 1.13rem;
+
+--xlarge-font-size: 1.48rem;
+--large-font-size: 1.23rem;
+--medium-font-size: 1.18rem;
+--base-font-size: 1.1rem;
+--small-font-size: 1.07rem;
+--tiny-font-size: .98rem;
+
+/*Font Weight*/
+--font-light: 300;
+--font-regular: 400;
+--font-medium: 500;
+--font-semibold: 600;
+--font-bold: 700;
+
+--z-minus: -1;
+--z-base: 0;
+--z-low: 1;
+--z-high: 10;
+--z-content: 100;
+--z-tooltip: 1000;
+--z-fixed: 1100;
+--z-overlay: 1110;
+--z-modal: 1990;
+--z-max: 9999;
+} 
+
