@@ -121,7 +121,7 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-bottom: 95px;
+    margin-bottom: 50px;
 }
 
 .section-title h3{
@@ -653,4 +653,222 @@ body{
     column-gap: 20px;
     row-gap: 25px;
 }
-1:34:48
+
+/*Resume*/
+.resume-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    margin-bottom: 100px;
+}
+
+.resume-tabs .tab-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+    color: var(--color-01);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-medium);
+    padding: 12px 0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.resume-tabs .tab-btn:hover{
+    color: var(--hover-color);
+}
+
+.resume-tabs .tab-btn i{
+    font-size: var(--xlarge-font-size);
+    margin-right: 3px;
+}
+
+.resume-tabs .tab-btn.active{
+    color: var(--dark-color);
+    background: var(--primary-color);
+    padding: 12px 15px;
+}
+
+.resume-tabs .tab-btn.active:hover{
+    color: var(--white-color);
+    background: var(--hover-color);
+}
+
+.resume-tab-content{
+    position: relative;
+    /* display: flex; */
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 25px;
+    display: none;
+}
+
+.resume-tab-content.active{
+    display: flex;
+}
+
+.education .resume-line{
+    background: var(--primary-color);
+    width: 2px;
+    height: 380px;
+}
+
+.resume-items{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 125px;
+}
+
+.resume-items .item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume-items .item:before{
+    content: "";
+    position: absolute;
+    background: var(--primary-color);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.resume-items .item .info{
+    position: absolute;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+
+.resume-items .item-left .info{
+    right: 35px;
+}
+
+.resume-items .item-right .info{
+    left: 50px;
+}
+
+.resume-items .item .info i{
+    color: var(--primary-color);
+    font-size: 2.15rem;
+}
+
+.resume-items .item .info h5{
+    color: var(--color-02);
+    font-size: var(--h5-font-size);
+    font-weight: var(--font-semi-bold);
+    white-space: break-spaces;
+    margin-bottom: 10px;
+}
+
+.resume-items .item .info p{
+    color: var(--color-04);
+    font-size: var(--small-font-size);
+    white-space: break-spaces;
+    margin-bottom: 18px;
+}
+
+.resume-items .item .info span{
+    position: relative;
+    background: var(--primary-color);
+    color: var(--dark-color);
+    font-size: var(--font-medium);
+    padding: 3px 12px;
+    border-radius: 3px;
+}
+
+.experience .resume-line{
+    background: var(--primary-color);
+    width: 2px;
+    height: 250px;
+}
+
+.education, .experience{
+    transform: translateY(35px);
+}
+
+.skill-container{
+    max-width: 100%;
+    display: flex;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 50px;
+    row-gap: 50px;
+}
+
+.skill-card{
+    position: relative;
+    background: var(--card-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 25px;
+    border-bottom: 5px solid var(--primary-color);
+    border-radius: 10px;
+}
+
+.skill-title{
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    margin-bottom: 50px;
+}
+
+.skill-title i{
+    font-size: 2.15rem;
+    color: var(--primary-color);
+}
+
+.skill-title span{
+    color: var(--color-02);
+    font-size: var(--medium-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.skill-categories{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 65px;
+    row-gap: 35px;
+    padding:  0 50px;
+}
+
+.skill{
+    display: flex;
+    column-gap: 15px;
+}
+
+.skill-info{
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.skill i{
+    color: var(--primary-color);
+    font-size: 1.35rem;
+}
+
+.skill-info h5{
+    color: var(--color-02);
+    font-size: var(--h5-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.skill-info span{
+    color: var(--color-04);
+    font-size: var(--tiny-font-size);
+}
