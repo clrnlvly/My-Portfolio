@@ -706,16 +706,19 @@ body{
     justify-content: center;
     margin-bottom: 25px;
     display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
 }
 
 .resume-tab-content.active{
     display: flex;
+    opacity: 1;
 }
 
 .education .resume-line{
     background: var(--primary-color);
     width: 2px;
-    height: 380px;
+    height: 500px;
 }
 
 .resume-items{
@@ -791,7 +794,7 @@ body{
 .experience .resume-line{
     background: var(--primary-color);
     width: 2px;
-    height: 250px;
+    height: 500px;
 }
 
 .education, .experience{
@@ -871,4 +874,64 @@ body{
 .skill-info span{
     color: var(--color-04);
     font-size: var(--tiny-font-size);
+}
+
+/*Services*/
+.services-container{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 35px;
+    row-gap: 38px;
+}
+
+.service-card{
+    position: relative;
+    background: var(--card-bg);
+    width: 275px;
+    height: 285px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    border-bottom: 5px solid var(--primary-color);
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.service-icon{
+    color: var(--primary-color);
+    font-size: 4.15rem;
+}
+
+.service-info h4{
+    color: var(--color-02);
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-semi-bold);
+    white-space: nowrap;
+    max-width: 150px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.service-see-more{
+    font-size: var(--base-font-size);
+    color: var(--color-01);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.service-see-more:hover{
+    color: var(--hover-color);
+}
+
+.service-see-more i{
+    font-size: 1.15rem;
+    transition: margin-left .3s;
+}
+
+.service-see-more:hover i{
+    margin-left: 3px;
 }
