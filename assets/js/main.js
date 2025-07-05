@@ -75,10 +75,31 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
 
     portfolioTabBtns.forEach((tabBtn) => {
-        tabBtn.addEventListener(() => {
+        tabBtn.addEventListener("click", () => {
             const filter = tabBtn.getAttribute("data-filter");
-        });
 
-        todo:3:17:07
+            cardsWithModals.forEach((cardWithModal) => {
+                if(filter === "all" || cardWithModal.classList.contains(filter)){                 
+                    cardWithModal.classList.remove("hidden");
+
+                    setTimeout(() => {
+                        cardWithModal.style.opacity = "1";
+                        cardWithModal.style.transition = ".5s ease";
+                    }, 1);
+
+                }
+                else{
+                    cardWithModal.classList.add("hidden");
+
+                    setTimeout(() => {
+                        cardWithModal.style.opacity = "0";
+                        cardWithModal.style.transition = ".5s ease";
+                    }, 1);
+                }
+            });
+            //Active tab
+                portfolioTabBtns.forEach((tabBtn) => tabBtn.classList.remove("active"));
+                tabBtn.classList.add("active");
+        });
     });
 });
