@@ -949,7 +949,17 @@ body{
     justify-content: center;
     align-items: center;
     overflow-y: auto;
+    display: none;
+    opacity: 0;
+    transition: opacity .3s ease;
 }
+
+.service-modal-backdrop.active{
+    opacity: 1;
+    transition: opacity .5s ease;
+}
+
+
 
 .service-modal{
     position: relative;
@@ -961,6 +971,15 @@ body{
     border-radius: 15px;
     border-bottom: 5px solid var(--primary-color);
     overflow: hidden;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform .5s, opacity .5s;
+}
+
+.service-modal.active{
+    transform: scale(1);
+    opacity: 1;
+    transition: transform .5s, opacity .5s;
 }
 
 .modal-close-btn{
@@ -1005,7 +1024,8 @@ body{
     background: var(--hover-color);
 }
 
-.service-modal .modal-title{
+.service-modal .modal-title, .my-services{
+    width: 100%;
     max-width: 600px;
     text-align: center;
     margin-left: auto;
@@ -1027,12 +1047,13 @@ body{
     text-align: justify;
 }
 
-.service-modal .modal-title h4{
+/* .service-modal .modal-title h4{
     color: var(--color-02);
     font-size: var(--h4-font-size);
     font-weight: var(--font-semi-bold);
     margin-bottom: 15px;
-}
+} */
+
 
 .modal-content .my-services li{
     display: flex;
@@ -1045,4 +1066,19 @@ body{
     margin-right: 10px;
 }
 
-to do: 2:38:13
+.modal-content .my-services li p{
+    color: var(--color-02);
+    font-size: var(--base-font-size);
+    line-height: 22px;
+}
+
+/*Portfolio*/
+.portfolio-tabs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 15px;
+    margin-bottom: 85px;
+}
