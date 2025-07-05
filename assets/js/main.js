@@ -68,3 +68,17 @@
 
 // });
 
+/**Portfolio */
+document.addEventListener("DOMContentLoaded", () => {
+    const portfolioTabs = document.querySelector(".portfolio-tabs");
+    const portfolioTabBtns = portfolioTabs.querySelectorAll(".tab-btn");
+    const cardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
+
+    portfolioTabBtns.forEach((tabBtn) => {
+        tabBtn.addEventListener(() => {
+            const filter = tabBtn.getAttribute("data-filter");
+        });
+
+        todo:3:17:07
+    });
+});
