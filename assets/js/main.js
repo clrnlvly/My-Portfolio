@@ -103,3 +103,37 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+/**Porfolio Modal */
+const portfolioCardsWithModals = document.querySelectorAll(".portfolio-container .card-with-modal");
+
+portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
+    const portfolioCard = portfolioCardWithModal.querySelector(".portfolio-card");
+    const portfolioBackdrop = portfolioCardWithModal.querySelector(".portfolio-modal-backdrop");
+    const portfolioModal = portfolioCardWithModal.querySelector(".portfolio-modal");
+    const modalCloseBtn = portfolioCardWithModal.querySelector(".modal-close-btn");
+
+    portfolioCard.addEventListener("click", () => {
+        portfolioBackdrop.style.display = "flex";
+
+
+        setTimeout(() => {
+            portfolioBackdrop.classList.add("active");
+        }, 300);
+
+        setTimeout(() => {
+            portfolioModal.classList.add("active");
+        }, 300);
+    });
+    
+    modalCloseBtn.addEventListener("click", () => {
+        setTimeout(() => {
+            portfolioBackdrop.style.display = "none";
+        }, 500);
+        
+        setTimeout(() => {
+            portfolioBackdrop.classList.remove("active");
+            portfolioModal.classList.remove("active");
+        }, 100);
+    });
+});
