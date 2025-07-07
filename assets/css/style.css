@@ -1293,3 +1293,87 @@ body{
     align-items: center;
     column-gap: 25px;
 }
+
+.contact-icon{
+    color: var(--primary-color);
+    font-size: 2rem;
+    background: var(--card-bg);
+    width: 75px;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.contact-method{
+    display: flex;
+    flex-direction: column;
+    row-gap: 7px;
+}
+
+.contact-method span{
+    font-size: var(--tiny-font-size);
+    text-transform: uppercase;
+}
+
+.contact-method h4{
+    color: var(--color-02);
+    font-size: var(--base-font-size);
+    font-weight: var(--medium-font-size);
+}
+
+.contact-method a{
+    color: var(--primary-color);
+    transition: .3s;
+}
+
+.contact-method a:hover{
+    color: var(--hover-color);
+
+}
+
+.contact-method a span{
+    font-size: var(--small-font-size);
+    text-transform: none;
+}
+
+.contact-method a i{
+    font-size: var(--medium-font-size);
+}
+
+.contact-social-links{
+    width: 100%;
+    display: flex;
+    column-gap: 25px;
+}
+
+
+.contact-social-links li{
+    font-size: 1.75rem;
+    background: var(--card-bg);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.contact-social-links li a{
+    color: var(--primary-color);
+    transition: .3s;
+}
+
+.contact-social-links li:hover a{
+    color: var(--hover-color);
+}
+
+.contact-form-container{
+    position: relative;
+    background: var(--card-bg);
+    width: 100%;
+    padding: 50px;
+    border-radius: 35px;
+}
