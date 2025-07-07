@@ -1265,3 +1265,31 @@ body{
 }
 
 /**ContactMe**/
+.contact-container{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 60px;
+}
+
+.contact-info h3{
+    color: var(--color-02);
+    font-size: var(--base-font-size);
+    font-weight: var(--medium-font-size);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.contact-details{
+    display: flex;
+    flex-direction: column;
+    row-gap: 60px;
+    margin-bottom: 50px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
