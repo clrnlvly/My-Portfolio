@@ -137,3 +137,40 @@ portfolioCardsWithModals.forEach((portfolioCardWithModal) => {
         }, 100);
     });
 });
+
+
+/**Contact Form - Send / Receive Emails */
+(function() {
+    // https://dashboard.emailjs.com/admin/account
+    emailjs.init({
+      publicKey: "6U9Ot29iNS11wPKcK",
+    });
+})();
+
+lvContactForm = document.getElementById("lv-contact-form");
+lvContactFormAlert = document.querySelector(".contact-form-alert");
+
+lvContactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    // these IDs from the previous steps
+    emailjs.sendForm('service_7i9d6e5', 'template_8ga5ttg', '#lv-contact-form')
+        .then(() => {
+            // console.log('SUCCESS!');
+            lvContactFormAlert.innerHTML = "<span>Your message sent successfully! </span><i class='ri-checkbox-circle-fill'></i>";
+            lvContactForm.reset();
+
+            setTimeout(() => {
+                lvContactFormAlert.innerHTML= "";
+            }, 5000);
+
+
+        }, (error) => {
+            // console.log('FAILED...', error);
+            lvContactFormAlert.innerHTML = "<span>Something went wrong! Message not sent. </span><i class='ri-error-warning-fill'></i>";
+            lvContactFormAlert.title = error;
+
+            setTimeout(() => {
+                lvContactFormAlert.innerHTML= "";
+            }, 5000);
+        });
+});
