@@ -176,3 +176,89 @@ lvContactForm.addEventListener('submit', function(event) {
 });
 
 /**Header on Scroll */
+window.addEventListener("scroll", () => {
+    const lvHeader = document.querySelector(".lv-header");
+    lvHeader.classList.toggle("shrink", window.scrollY > 0);
+});
+
+/**Navigation Menu */
+window.addEventListener("scroll", () => {
+   const navMenuSections = document.querySelectorAll(".nav-menu-section");
+   const scrollY = window.pageYOffset;
+
+   navMenuSections.forEach((navMenuSection) => {
+    let sectionHeight = navMenuSection.offsetHeight;
+    let sectionTop = navMenuSection.offsetTop - 50;
+    let id = navMenuSection.getAttribute("id");
+
+    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        document.querySelector(".bottom-nav .menu li a[href*=" + id + "]").classList.add("current");
+    }
+    else{
+        document.querySelector(".bottom-nav .menu li a[href*=" + id + "]").classList.remove("current");
+    }
+
+
+   });
+});
+
+/**Navigation Menu - On Page Load */
+window.addEventListener("DOMContentLoaded", () => {
+    const bottomNav = document.querySelector(".bottom-nav");
+
+    bottomNav.classList.toggle("active", window.scrollY < 10);
+});
+
+/**Show / Hide Navigation */
+const bottomNav = document.querySelector(".bottom-nav");
+const menuHideBtn = document.querySelector(".menu-hide-btn");
+const menuShowBtn = document.querySelector(".menu-show-btn");
+var navTimeout;
+
+window.addEventListener("scroll", () => {
+    bottomNav.classList.add("active");
+    menuShowBtn.classList.remove("active");
+
+     if(window.scrollY < 10){
+        menuHideBtn.classList.remove("active");
+        function scrollStopped(){
+            bottomNav.classList.add("active");
+        }
+
+        clearTimeout(navTimeout);
+        navTimeout = setTimeout(scrollStopped, 2000);
+    }
+
+    if(window.scrollY > 10){
+        menuHideBtn.classList.add("active");
+
+        function scrollStopped(){
+            bottomNav.classList.remove("active");
+            menuShowBtn.classList.add("active");
+        }
+
+        clearTimeout(navTimeout);
+        navTimeout = setTimeout(scrollStopped, 2000);
+    }
+
+});
+
+/**Hide Navigation */
+menuHideBtn.addEventListener("click", () => {
+    bottomNav.classList.toggle("active");
+    menuHideBtn.classList.toggle("active");
+    menuShowBtn.classList.toggle("active");
+});
+
+menuShowBtn.addEventListener("click", () => {
+    bottomNav.classList.toggle("active");
+    menuHideBtn.classList.add("active");
+    menuShowBtn.classList.toggle("active");
+});
+
+/**Scroll bar Indicator to top */
+window.addEventListener("scroll", () => {
+   const toTopBtn = document.querySelector(".to-top-btn");
+   
+   toTopBtn.classList.toggle("active", window.scrollY > 0);
+});
