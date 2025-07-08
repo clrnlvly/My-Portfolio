@@ -256,10 +256,60 @@ menuShowBtn.addEventListener("click", () => {
     menuShowBtn.classList.toggle("active");
 });
 
-todo:5:20:45
+
 /**Scroll bar Indicator to top */
 window.addEventListener("scroll", () => {
    const toTopBtn = document.querySelector(".to-top-btn");
    
    toTopBtn.classList.toggle("active", window.scrollY > 0);
+
+   const scrollIndicator = document.querySelector(".scroll-indicator-bar");
+
+   const pageScroll = document.body.scrollTop || document.documentElement.scrollTop;
+   const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+
+   const scrollValue = (pageScroll / height) * 100;
+
+   scrollIndicator.style.height = scrollValue + "%";
+});
+
+/**Cursor */
+// const cursor = document.querySelector(".cursor");
+// const cursorDot = document.querySelector(".cursor-dot");
+// const cursorCircle = document.querySelector(".cursor-circle");
+
+// document.addEventListener("mousemove", (e) => {
+//    let x = e.clientX;
+//    let y = e.clientY;
+   
+//    cursorDot.style.top = y + "px";
+//    cursorDot.style.left = x + "px";
+//    cursorCircle.style.top = y + "px";
+//    cursorCircle.style.left = x + "px";
+   
+// });
+
+/**Cursor Hover Effect */
+// const cursorHoverLinks = document.querySelectorAll("body a, .theme-btn, .lv-main-btn, .portfolio-card, .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet, .service-card, .contact-social-links li, .contact-form, .submit-btn, .menu-show-btn, .menu-hide-btn");
+
+// cursorHoverLinks.forEach((cursorHoverLink) => {
+//    cursorHoverLink.addEventListener("mouseover", () => {
+//        cursorDot.classList.add("large");
+//         cursorCircle.style.display = ("none");
+//    });
+// });
+
+// cursorHoverLinks.forEach((cursorHoverLink) => {
+//    cursorHoverLink.addEventListener("mouseout", () => {
+//        cursorDot.classList.remove("large");
+//         cursorCircle.style.display = ("block");
+//    });
+// });
+
+/**Theme Dark/Light Change */
+const themeBtn = document.querySelector(".theme-btn");
+
+themeBtn.addEventListener("click", () => {
+   themeBtn.classList.toggle("active-sun-icon"); 
+   document.body.classList.toggle("light-theme");
 });

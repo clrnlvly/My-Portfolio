@@ -65,6 +65,11 @@
 --z-max: 9999;
 } 
 
+/*Light Theme*/
+5:40:31
+
+
+
 /*Reset*/
 *{
     box-sizing: border-box;
@@ -216,6 +221,48 @@ body{
     background: var(--scrollbar-thumb-hover);
 }
 
+
+/*Cursor*/
+.cursor{
+    z-index: var(--z-max);
+    position: fixed;
+    /* top: 50%;
+    left: 50%; */
+    pointer-events: none;
+}
+
+.cursor-dot{
+    position: absolute;
+    background: var(--primary-color);   
+    width: 5px;
+    height: 5px;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition-property: top, left, width, height;
+    transition-duration: .03s, .03s, .3s, .3s;
+}
+
+.cursor-dot.large{
+    background: hsl(var(--hue) var(--sat) var(--light) / .35);
+    width: 50px;
+    height: 50px;
+    transition-property: top, left, width, height;
+    transition-duration: .03s, .03s, .3s, .3s;
+}
+
+.cursor-circle{
+    position: absolute;
+    border: 2px solid var(--primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: .5;
+    transform: translate(-50%, -50%);
+    transition-property: top, left;
+    transition-duration: .09s, .09s;
+}
+
+
 /*To Top Button*/
 .to-top-btn{
     z-index: var(--z-fixed);
@@ -326,9 +373,23 @@ body{
     transform: rotate(-15deg);
 }
 
-.theme-btn .moon-icon{
+/* .theme-btn .moon-icon{
     display: none;
+} */
+
+
+.theme-btn.active-sun-icon .sun-icon,
+.theme-btn .moon-icon{
+    opacity: 1;
+    transition: .3s;
 }
+
+.theme-btn.active-sun-icon .moon-icon,
+.theme-btn .sun-icon{
+    opacity: 0;
+    transition: .3s;
+}
+
 
 /*Bottom Nav Menu*/
 .bottom-nav-container{
@@ -492,31 +553,30 @@ body{
 
 
 
-@keyframes wiggle{
-    0%,
-    5%{
-        transform: rotate(0);
+@keyframes wiggle {
+    0%, 5% {
+        transform: translateX(-50%) rotate(0);
     }
-    15%{
-        transform: rotateZ(-15deg);
+    15% {
+        transform: translateX(-50%) rotateZ(-15deg);
     }
-    20%{
-        transform: rotateZ(10deg);
+    20% {
+        transform: translateX(-50%) rotateZ(10deg);
     }
-    25%{
-        transform: rotateZ(-10deg);
+    25% {
+        transform: translateX(-50%) rotateZ(-10deg);
     }
-    30%{
-        transform: rotateZ(6deg);
+    30% {
+        transform: translateX(-50%) rotateZ(6deg);
     }
-    35%{
-        transform: rotateZ(-4deg);
+    35% {
+        transform: translateX(-50%) rotateZ(-4deg);
     }
-    40%,
-    100%{
-        transform: rotateZ(0);
+    40%, 100% {
+        transform: translateX(-50%) rotateZ(0);
     }
 }
+
 
 .menu-show-btn .bar-01, 
 .menu-show-btn .bar-02{
