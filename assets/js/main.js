@@ -274,37 +274,37 @@ window.addEventListener("scroll", () => {
 });
 
 /**Cursor */
-// const cursor = document.querySelector(".cursor");
-// const cursorDot = document.querySelector(".cursor-dot");
-// const cursorCircle = document.querySelector(".cursor-circle");
+const cursor = document.querySelector(".cursor");
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorCircle = document.querySelector(".cursor-circle");
 
-// document.addEventListener("mousemove", (e) => {
-//    let x = e.clientX;
-//    let y = e.clientY;
+document.addEventListener("mousemove", (e) => {
+   let x = e.clientX;
+   let y = e.clientY;
    
-//    cursorDot.style.top = y + "px";
-//    cursorDot.style.left = x + "px";
-//    cursorCircle.style.top = y + "px";
-//    cursorCircle.style.left = x + "px";
+   cursorDot.style.top = y + "px";
+   cursorDot.style.left = x + "px";
+   cursorCircle.style.top = y + "px";
+   cursorCircle.style.left = x + "px";
    
-// });
+});
 
 /**Cursor Hover Effect */
-// const cursorHoverLinks = document.querySelectorAll("body a, .theme-btn, .lv-main-btn, .portfolio-card, .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet, .service-card, .contact-social-links li, .contact-form, .submit-btn, .menu-show-btn, .menu-hide-btn");
+const cursorHoverLinks = document.querySelectorAll("body a, .theme-btn, .lv-main-btn, .portfolio-card, .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet, .service-card, .contact-social-links li, .contact-form, .submit-btn, .menu-show-btn, .menu-hide-btn");
 
-// cursorHoverLinks.forEach((cursorHoverLink) => {
-//    cursorHoverLink.addEventListener("mouseover", () => {
-//        cursorDot.classList.add("large");
-//         cursorCircle.style.display = ("none");
-//    });
-// });
+cursorHoverLinks.forEach((cursorHoverLink) => {
+   cursorHoverLink.addEventListener("mouseover", () => {
+       cursorDot.classList.add("large");
+        cursorCircle.style.display = ("none");
+   });
+});
 
-// cursorHoverLinks.forEach((cursorHoverLink) => {
-//    cursorHoverLink.addEventListener("mouseout", () => {
-//        cursorDot.classList.remove("large");
-//         cursorCircle.style.display = ("block");
-//    });
-// });
+cursorHoverLinks.forEach((cursorHoverLink) => {
+   cursorHoverLink.addEventListener("mouseout", () => {
+       cursorDot.classList.remove("large");
+        cursorCircle.style.display = ("block");
+   });
+});
 
 /**Theme Dark/Light Change */
 const themeBtn = document.querySelector(".theme-btn");
@@ -312,4 +312,20 @@ const themeBtn = document.querySelector(".theme-btn");
 themeBtn.addEventListener("click", () => {
    themeBtn.classList.toggle("active-sun-icon"); 
    document.body.classList.toggle("light-theme");
+
+   //Save
+   const getCurrentIcon = () => themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
+   const getCurrentTheme = () => document.body.classList.contains("light-theme") ? "light" : "dark";
+
+   localStorage.setItem("lv-saved-icon", getCurrentIcon());
+   localStorage.setItem("lv-saved-theme", getCurrentTheme());
+});
+
+
+const savedIcon = localStorage.getItem("lv-saved-icon");
+const savedTheme = localStorage.getItem("lv-saved-theme");
+
+document.addEventListener("DOMContentLoaded", () => {
+   themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
+   document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme"); 
 });
