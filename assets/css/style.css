@@ -678,6 +678,7 @@ body{
 .home-social{
     position: absolute;
     left: 0;
+    bottom: 150px;
 }
 
 .home-social span{
@@ -1713,4 +1714,21 @@ body{
 }
 
 /**Media Queries**/
-5:58:28
+@media screen and (max-width: 1600px){
+
+}
+
+@media screen and (max-width: 1200px){
+
+}
+
+@media screen and (max-width: 992px){
+
+}
+}
+
+@media screen and (max-width: 768px){
+
+}
+
+@media screen and (max-width: 480px){
