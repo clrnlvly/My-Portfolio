@@ -195,6 +195,25 @@ body{
     color: var(--hover-color);
 }
 
+
+/**ScrollBar**/
+::-webkit-scrollbar{
+    width: 5px;
+    background: var(--scrollbar-color);
+}
+
+::-webkit-scrollbar-thumb{
+    background: var(--scrollbar-thumb);
+    border-radius: 25px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: var(--scrollbar-thumb-hover);
+}
+
+
+
+
 /*Buttons*/
 .lv-main-btn{
     width: fit-content;
@@ -1451,3 +1470,52 @@ body{
     font-size: 1.25rem;
 }
 
+/**Footer**/
+.lv-footer{
+    background: var(--footer-bg);
+    padding-top: 100px;
+    padding-bottom: 165px;
+}
+
+.lv-footer .lv-container .inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 40px;
+}
+
+.footer-menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 22px;
+    row-gap: 22px;
+}
+
+.footer-menu .menu-item a{
+    color: var(--color-01);
+    font-size: calc(var(--tiny-font-size) - .07rem);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    padding: 3px 12px;
+    border-radius: 15px;
+    transition: .3s;
+}
+
+.footer-menu .menu-item a:hover{
+    color: var(--color-03);
+    background: var(--color-01);
+}
+
+.lv-footer .copy-right{
+    color: var(--color-04);
+    font-size: var(--small-font-size);
+    margin-top: 10px;
+}
+
+.lv-footer .copy-right a:hover{
+    color: var(--color-01);
+    transition: .3s;
+}
