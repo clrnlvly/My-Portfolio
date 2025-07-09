@@ -2001,6 +2001,7 @@ body{
 
     .portfolio-modal .modal-content {
         row-gap: 20px;
+        margin-top: 25px;
     }
 
     .portfolio-modal .modal-content .modal-title {
