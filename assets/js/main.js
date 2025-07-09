@@ -335,6 +335,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
    // Set image on load
    avatarImg.src = savedTheme === "light"
-      ? "assets/images/avatar-light.png"
+      ? "assets/images/avatar-2.png"
       : "assets/images/avatar-3.png";
 });
