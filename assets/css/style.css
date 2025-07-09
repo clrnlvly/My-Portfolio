@@ -1889,9 +1889,6 @@ body{
         padding: 10px 15px;
     }
 
-    .home-social {
-        bottom: 120px;
-    }
     .home-social .social-line{
         font-size: 1.5rem;
         margin-top: 20px;
@@ -1992,7 +1989,7 @@ body{
 
     .portfolio-modal .modal-vid iframe {
         width: 400px;
-        /* height: 200px;  */
+        height: 200px; 
     }
 
     .portfolio-modal .modal-vid {
@@ -2140,5 +2137,6 @@ body{
         --small-font-size: 0.825rem;   /* ~13px */
         --tiny-font-size: 0.75rem;     /* ~12px */
   }
+
 
 }
