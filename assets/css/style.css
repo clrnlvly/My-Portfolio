@@ -2114,8 +2114,32 @@ body{
     padding-top: 25px;
     padding-bottom: 120px;
   }
+
+  .footer-menu {
+    column-gap: 10px;
+  }
+
+  .to-top-btn.active {
+    right: 20px;
+  }
 }
 
 
 @media screen and (max-width: 480px){
+    :root {
+        --h1-font-size: 1.75rem;   /* ~28px */
+        --h2-font-size: 1.5rem;    /* ~24px */
+        --h3-font-size: 1.3rem;    /* ~21px */
+        --h4-font-size: 1.1rem;    /* ~18px */
+        --h5-font-size: 0.95rem;   /* ~15px */
+
+        --xlarge-font-size: 1rem;      /* ~16px */
+        --large-font-size: 0.95rem;    /* ~15px */
+        --medium-font-size: 0.9rem;    /* ~14px */
+        --base-font-size: 0.875rem;    /* ~14px */
+        --small-font-size: 0.825rem;   /* ~13px */
+        --tiny-font-size: 0.75rem;     /* ~12px */
+  }
+
+  63551
 }
