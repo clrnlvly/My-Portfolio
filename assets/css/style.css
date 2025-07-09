@@ -1978,7 +1978,7 @@ body{
 
     .service-modal {
         max-width: 500px;
-        height: 400px;
+        /* height: 400px; */
         margin: 25px 25px;
         padding: 5px 25px 10px 25px;
     }
@@ -1992,7 +1992,7 @@ body{
 
     .portfolio-modal .modal-vid iframe {
         width: 400px;
-        height: 200px; /* reduce height for smaller screens */
+        /* height: 200px;  */
     }
 
     .portfolio-modal .modal-vid {
@@ -2141,5 +2141,4 @@ body{
         --tiny-font-size: 0.75rem;     /* ~12px */
   }
 
-  63551
 }
