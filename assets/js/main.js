@@ -306,26 +306,35 @@ cursorHoverLinks.forEach((cursorHoverLink) => {
    });
 });
 
-/**Theme Dark/Light Change */
+/** Theme Dark/Light Change */
 const themeBtn = document.querySelector(".theme-btn");
+const avatarImg = document.querySelector(".avatar-img img");
 
 themeBtn.addEventListener("click", () => {
    themeBtn.classList.toggle("active-sun-icon"); 
    document.body.classList.toggle("light-theme");
 
-   //Save
-   const getCurrentIcon = () => themeBtn.classList.contains("active-sun-icon") ? "sun" : "moon";
-   const getCurrentTheme = () => document.body.classList.contains("light-theme") ? "light" : "dark";
+   const currentTheme = document.body.classList.contains("light-theme") ? "light" : "dark";
 
-   localStorage.setItem("lv-saved-icon", getCurrentIcon());
-   localStorage.setItem("lv-saved-theme", getCurrentTheme());
+   // Save preference
+   localStorage.setItem("lv-saved-icon", currentTheme === "light" ? "sun" : "moon");
+   localStorage.setItem("lv-saved-theme", currentTheme);
+
+   // Update image
+   avatarImg.src = currentTheme === "light"
+      ? "assets/images/avatar-2.png"
+      : "assets/images/avatar-3.png";
 });
 
-
-const savedIcon = localStorage.getItem("lv-saved-icon");
-const savedTheme = localStorage.getItem("lv-saved-theme");
-
 document.addEventListener("DOMContentLoaded", () => {
+   const savedIcon = localStorage.getItem("lv-saved-icon");
+   const savedTheme = localStorage.getItem("lv-saved-theme");
+
    themeBtn.classList[savedIcon === "sun" ? "add" : "remove"]("active-sun-icon");
-   document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme"); 
+   document.body.classList[savedTheme === "light" ? "add" : "remove"]("light-theme");
+
+   // Set image on load
+   avatarImg.src = savedTheme === "light"
+      ? "assets/images/avatar-light.png"
+      : "assets/images/avatar-3.png";
 });

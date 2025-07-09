@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
---hue: 175; /* A youthful teal-aqua (between cyan and green) */
+  --hue: 175; /* A youthful teal-aqua (between cyan and green) */
   --sat: 85%; /* High saturation for vibrancy */
   --light: 70%; /* Bright but not neon */
 
@@ -21,11 +21,7 @@
 
   /* Backgrounds (with a glowing effect!) */
   --bottom-nav-bg: hsl(var(--hue), 50%, 30% / 0.7); /* Semi-transparent teal */
-  --card-bg: linear-gradient(
-    135deg,
-    hsl(var(--hue), 80%, 80% / 0.2),
-    hsl(var(--hue), 60%, 60% / 0.1)
-  ); /* Glowy gradient */
+  --card-bg: hsl(var(--hue), 20%, 32%);  
   --modal-backdrop-bg: hsl(var(--hue), 70%, 80% / 0.15); /* Soft aqua glow */
   --footer-bg: linear-gradient(
     180deg,
@@ -76,24 +72,32 @@
 
 /*Light Theme*/
 .light-theme{
-   /*For dark and light theme*/
- --color-01: hsl(var(--hue) 26% 12%); 
- --color-02: hsl(var(--hue) 26% 12%) ; 
- --color-03: hsl(var(--hue) 45% 98%) ;
- --color-04: hsl(var(--hue) 9% 46%) ;
- --color-05: hsl(var(--hue) var(--sat) var(--light)) ;
+  --hue: 190;         /* Calm teal/aqua */
+  --sat: 70%;         /* Slightly less saturated for softness */
+  --light: 52%;       /* Moderate base lightness */
 
- --body-color: hsl(var(--hue) 50% 80%);
+  --primary-color: hsl(var(--hue), var(--sat), var(--light));      /* Soft aqua */
+  --white-color: hsl(var(--hue), 25%, 94%);                        /* Off-white */
+  --dark-color: hsl(var(--hue), 30%, 18%);                         /* Rich teal for strong text */
 
- /*Background*/
---bottom-nav-bg: hsl(var(--hue) 32% 80% / .8);
---card-bg: hsl(0, 0%, 92%);
---modal-backdrop-bg: hsl(var(--hue) 50% 12% / .5);
---footer-bg: linear-gradient(360deg, hsl(var(--hue) var(--sat) var(--light) / .75));
+  --color-01: hsl(var(--hue), 30%, 88%);                    /* Aqua accent */
+  --color-02: hsl(var(--hue), 25%, 94%);                           /* Main background */
+  --color-03: hsl(var(--hue), 30%, 18%);                           /* Text, icons */
+  --color-04: hsl(var(--hue), 20%, 85%);                           /* Cards / secondary backgrounds */
+  --color-05: hsl(var(--hue), 80%, 45%);                           /* Bright accent (buttons, links) */
 
---scrollbar-color: hsl(var(--hue) 9% 60%);
---scrollbar-thumb: hsl(var(--hue) 9% 25%);
---scrollbar-thumb-hover: hsl(var(--hue) 9% 17%);
+  --body-color: hsl(var(--hue), 20%, 32%);                         /* Gentle background */
+  --hover-color: hsl(var(--hue), var(--sat), 60%);                 /* Brighter hover */
+
+  --bottom-nav-bg: hsl(var(--hue), 25%, 80% / 0.8);                /* Light but visible nav bar */
+  --card-bg: hsl(var(--hue), 30%, 18%);                             /* Soft glow with depth */
+
+  --modal-backdrop-bg: hsl(var(--hue), 60%, 85% / 0.3);            /* Subtle overlay */
+  --footer-bg: hsl(var(--hue), 30%, 18%);
+
+  --scrollbar-color: hsl(var(--hue), 20%, 75%);
+  --scrollbar-thumb: hsl(var(--hue), 60%, 55%);
+  --scrollbar-thumb-hover: hsl(var(--hue), 70%, 60%);
 
     .bottom-nav .menu-hide-btn{
         box-shadow: 0 2px 4px hsl(0, 0%, 1%, .25);
@@ -113,20 +117,21 @@
     }
 
     .lv-footer .copy-right{
-        color: hsl(var(--hue) 26% 30%);
+        color: hsl(var(--hue) 26% 40%);
     }
 
     .lv-footer .copy-right a{
-        color: hsl(var(--hue) 26% 30%);
+        color: hsl(var(--hue) 26% 70%);
     }
 
     .lv-footer .copy-right a:hover{
-        color: hsl(var(--hue) 0% 0%);
+        color: hsl(var(--hue), 30%, 88%);
     }
 
     .to-top-btn{
         background: hsl(var(--hue) 26% 12% / .2);
     }
+
 
 }
 
@@ -1625,9 +1630,9 @@ body{
 
 .contact-form-container form .input-group input,
 .contact-form-container form .input-group textarea{
-    color: var(--color-02);
+    color: var(--color-03);
     font-size: var(--small-font-size);
-    background: hsl(var(--hue) 54% 74% / .1);
+    /* background: hsl(var(--hue) 54% 74% / .1); */
     width: 100%;
     border: none;
     outline: none;
