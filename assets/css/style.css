@@ -1,33 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 :root {
- --hue: 217;
- --sat: 85%;
- --light: 74%;
+--hue: 175; /* A youthful teal-aqua (between cyan and green) */
+  --sat: 85%; /* High saturation for vibrancy */
+  --light: 70%; /* Bright but not neon */
 
- --primary-color: hsl(var(--hue) var(--sat) var(--light));
- --white-color: hsl(var(--hue) 45% 98%); /*white*/ 
- --dark-color:  hsl(var(--hue) 26% 12%); /*dark*/
+  --primary-color: hsl(var(--hue), var(--sat), var(--light)); /* Main aqua */
+  --white-color: hsl(var(--hue), 10%, 98%); /* Soft white with a hint of aqua */
+  --dark-color: hsl(var(--hue), 35%, 10%); /* Deep teal for contrast */
 
- /*For dark and light theme*/
- --color-01: hsl(var(--hue) var(--sat) var(--light)); /*primary to dark*/
- --color-02: hsl(var(--hue) 45% 98%) ; /*white to dark*/
- --color-03: hsl(var(--hue) 26% 12%) ; /*dark to white*/
- --color-04: hsl(var(--hue) 0% 62%) ; /*light-gray to dark-gray*/
- --color-05: hsl(var(--hue) 26% 12%) ; /*dark to primary*/
+  /* For dark/light theme switching */
+  --color-01: hsl(var(--hue), var(--sat), var(--light)); /* Primary */
+  --color-02: hsl(var(--hue), 10%, 98%); /* White */
+  --color-03: hsl(var(--hue), 35%, 10%); /* Dark */
+  --color-04: hsl(var(--hue), 15%, 75%); /* Light gray (softer) */
+  --color-05: hsl(175, 80%, 60%); /* A brighter aqua for highlights */
 
- --body-color: hsl(250 26% 12%);
- --hover-color: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+  --body-color: hsl(176, 33%, 9%); /* Deep teal background */
+  --hover-color: hsl(var(--hue), var(--sat), calc(var(--light) + 5%)); /* Brighter on hover! */
 
- /*Background*/
---bottom-nav-bg: hsl(var(--hue) 32% 25% / .65);
---card-bg: linear-gradient(120deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .05));
---modal-backdrop-bg: hsl(var(--hue) 54% 74% / .1);
---footer-bg: linear-gradient(360deg, hsl(var(--hue) 54% 74% / .15), hsl(var(--hue) 54% 74% / .1));
+  /* Backgrounds (with a glowing effect!) */
+  --bottom-nav-bg: hsl(var(--hue), 50%, 30% / 0.7); /* Semi-transparent teal */
+  --card-bg: linear-gradient(
+    135deg,
+    hsl(var(--hue), 80%, 80% / 0.2),
+    hsl(var(--hue), 60%, 60% / 0.1)
+  ); /* Glowy gradient */
+  --modal-backdrop-bg: hsl(var(--hue), 70%, 80% / 0.15); /* Soft aqua glow */
+  --footer-bg: linear-gradient(
+    180deg,
+    hsl(var(--hue), 70%, 80% / 0.25),
+    hsl(var(--hue), 40%, 30% / 0.1)
+  ); /* Fading glow effect */
 
---scrollbar-color: hsl(var(--hue) 25% 20%);
---scrollbar-thumb: hsl(var(--hue) var(--sat) var(--light));
---scrollbar-thumb-hover: hsl(var(--hue) var(--sat) calc(var(--light) - 7%));
+  /* Scrollbar (fun and modern) */
+  --scrollbar-color: hsl(var(--hue), 30%, 20%);
+  --scrollbar-thumb: hsl(var(--hue), 80%, 60%); /* Bright aqua */
+  --scrollbar-thumb-hover: hsl(var(--hue), 90%, 70%); /* Even brighter! */
 
 /*Typography*/
 --body-font-family: "Inter", sans-serif;
@@ -475,7 +484,7 @@ body{
 
 .bottom-nav .menu{
     background: var(--bottom-nav-bg);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(60px);
     padding: 16px 35px;
     display: flex;
     justify-content: center;
