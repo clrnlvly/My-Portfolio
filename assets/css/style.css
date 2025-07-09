@@ -16,18 +16,14 @@
   --color-04: hsl(var(--hue), 15%, 75%); /* Light gray (softer) */
   --color-05: hsl(175, 80%, 60%); /* A brighter aqua for highlights */
 
-  --body-color: hsl(176, 33%, 9%); /* Deep teal background */
+  --body-color: hsl(176deg 97.99% 3.65%); /* Deep teal background */
   --hover-color: hsl(var(--hue), var(--sat), calc(var(--light) + 5%)); /* Brighter on hover! */
 
   /* Backgrounds (with a glowing effect!) */
   --bottom-nav-bg: hsl(var(--hue), 50%, 30% / 0.7); /* Semi-transparent teal */
   --card-bg: hsl(var(--hue), 20%, 32%);  
   --modal-backdrop-bg: hsl(var(--hue), 70%, 80% / 0.15); /* Soft aqua glow */
-  --footer-bg: linear-gradient(
-    180deg,
-    hsl(var(--hue), 70%, 80% / 0.25),
-    hsl(var(--hue), 40%, 30% / 0.1)
-  ); /* Fading glow effect */
+  --footer-bg: hsl(var(--hue), 30%, 18%); 
 
   /* Scrollbar (fun and modern) */
   --scrollbar-color: hsl(var(--hue), 30%, 20%);
