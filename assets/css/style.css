@@ -1054,7 +1054,7 @@ body{
 
 .skill-categories{
     display: grid;
-    place-items: center;
+    place-items: start;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 65px;
     row-gap: 35px;
@@ -1942,11 +1942,178 @@ body{
     }
 
     .resume-items .item-right .info {
-        left: 25px;
+        left: 75px;
     }
 
-    62554
+    .resume-items .item .info i {
+        display: none;
+    }
 
+    .skill-card {
+        padding: 50px 0;
+    }
+
+    .skill i {
+        font-size: 1.25rem;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 30px;
+    }
+
+    .service-card {
+        width: 245px;
+        height: 250px;
+    }
+
+    .service-icon {
+        font-size: 3.25rem;
+    }
+
+    .service-info h4{
+        white-space: wrap;
+        max-width: unset;
+    }
+
+    .service-modal {
+        max-width: 500px;
+        height: 400px;
+        margin: 25px 25px;
+        padding: 5px 25px 10px 25px;
+    }
+
+    .portfolio-modal {
+        max-width: 90%;
+        margin: 50px 15px;
+        padding: 30px 20px;
+        border-radius: 12px;
+    }
+
+    .portfolio-modal .modal-vid iframe {
+        width: 400px;
+        height: 200px; /* reduce height for smaller screens */
+    }
+
+    .portfolio-modal .modal-vid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .portfolio-modal .modal-content {
+        row-gap: 20px;
+    }
+
+    .portfolio-modal .modal-content .modal-title {
+        font-size: var(--h5-font-size);
+    }
+
+    .portfolio-modal .modal-content .modal-description {
+        font-size: var(--small-font-size);
+        max-width: 400px;
+    }
+
+    .contact-container {
+    flex-direction: column;
+    align-items: stretch;
+    row-gap: 40px;
+    column-gap: 0;
+  }
+
+  .contact-info h3 {
+    font-size: var(--small-font-size);
+    margin-bottom: 25px;
+    text-align: center;
+  }
+
+  .contact-details {
+    row-gap: 30px;
+    margin-bottom: 30px;
+  }
+
+  .contact-item {
+    column-gap: 15px;
+  }
+
+  .contact-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+
+  .contact-method h4 {
+    font-size: var(--small-font-size);
+  }
+
+  .contact-method a span {
+    font-size: var(--tiny-font-size);
+  }
+
+  .contact-social-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .contact-social-links li {
+    width: 55px;
+    height: 55px;
+    font-size: 1.3rem;
+  }
+
+  .contact-form-container {
+    padding: 30px 20px;
+    border-radius: 25px;
+  }
+
+  .contact-form-container h2 {
+    font-size: var(--h4-font-size);
+    text-align: center;
+  }
+
+  .contact-form-container p {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-form-container form .input-group input,
+  .contact-form-container form .input-group textarea {
+    padding: 14px 16px;
+    font-size: var(--tiny-font-size);
+  }
+
+  .contact-form-container form .input-group textarea {
+    height: 120px;
+  }
+
+  .contact-form-container form .send-message {
+    flex-direction: column;
+    row-gap: 15px;
+    align-items: stretch;
+  }
+
+  .contact-form-container .input-group button {
+    font-size: var(--tiny-font-size);
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    width: auto;
+  }
+
+  .contact-form-alert span {
+    font-size: var(--tiny-font-size);
+  }
+
+  .contact-form-alert i {
+    font-size: 1rem;
+  }
+
+  .lv-footer {
+    padding-top: 25px;
+    padding-bottom: 120px;
+  }
 }
 
 
