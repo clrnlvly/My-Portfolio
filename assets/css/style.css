@@ -1777,9 +1777,9 @@ body{
 }
 
 @media screen and (max-width: 992px){
-    .lv-wrapper{
+    /* .lv-wrapper{
         margin-top: 50px;
-    }
+    } */
 
     .avatar-container {
         flex-direction: column-reverse;
@@ -1793,10 +1793,10 @@ body{
         display: none;
     }
 
-    .avatar-img {
+    /* .avatar-img {
         width: 300px;
         height: 300px;
-    }
+    } */
 
     .avatar-info .text-content{
         align-items: center;
@@ -1853,9 +1853,9 @@ body{
         --tiny-font-size: 0.8rem;
     }
 
-    .lv-wrapper {
+    /* .lv-wrapper {
         margin-top: 5px;
-    }
+    } */
 
     .lv-container {
         margin-left: 25px;
@@ -1879,10 +1879,10 @@ body{
         font-size: 1.6rem;
     }
 
-    .avatar-img {
+    /* .avatar-img {
         width: 200px;
         height: 200px;
-    }
+    } */
 
     .avatar-container .hire-btn-01 {
         font-size: var(--small-font-size);
