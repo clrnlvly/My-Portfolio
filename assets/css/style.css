@@ -1837,22 +1837,118 @@ body{
 }
 
 
-@media screen and (max-width: 768px){
-    :root {      
-        --h1-font-size: 2.25rem;
-        --h2-font-size: 1.85rem;
-        --h3-font-size: 1.6rem;
-        --h4-font-size: 1.3rem;
-        --h5-font-size: 1.05rem;
+@media screen and (max-width: 768px) {
+    :root {
+        --h1-font-size: 1.85rem;
+        --h2-font-size: 1.6rem;
+        --h3-font-size: 1.4rem;
+        --h4-font-size: 1.2rem;
+        --h5-font-size: 1rem;
 
-        --xlarge-font-size: 1.2rem;
-        --large-font-size: 1.1rem;
-        --medium-font-size: 1.05rem;
-        --base-font-size: 1rem;
-        --small-font-size: 0.95rem;
-        --tiny-font-size: 0.88rem;
+        --xlarge-font-size: 1.05rem;
+        --large-font-size: 1rem;
+        --medium-font-size: 0.95rem;
+        --base-font-size: 0.9rem;
+        --small-font-size: 0.85rem;
+        --tiny-font-size: 0.8rem;
     }
+
+    .lv-wrapper {
+        margin-top: 5px;
+    }
+
+    .lv-container {
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .lv-logo a {
+        font-size: 2.35rem;
+    }
+
+    .lets-talk-btn {
+        display: none;
+    }
+
+    .lets-talk-icon {
+        font-size: 1.6rem;
+        display: block;
+    }
+
+    .theme-btn i {
+        font-size: 1.6rem;
+    }
+
+    .avatar-img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .avatar-container .hire-btn-01 {
+        font-size: var(--small-font-size);
+        padding: 10px 15px;
+    }
+
+    .home-social {
+        bottom: 120px;
+    }
+    .home-social .social-line{
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .home-social .social-icons li a{
+        font-size: 1rem;
+    }
+
+    .home-scroll-btn div{
+        font-size: .8rem;
+    }
+
+    .home-scroll-btn i{
+        font-size: 1.5rem;
+    }
+
+    .bottom-nav {
+        bottom: -30px;
+    }
+
+    .bottom-nav.active {
+        bottom: 30px;
+    }
+
+    .bottom-nav .menu li a i {
+        font-size: 1rem;
+        padding: 5px;
+    }
+
+    .about-img {
+        width: 200px;
+    }
+
+
+    .about-description {
+        max-width: 500px;
+    }
+
+    .resume-items .item .info {
+        width: 185px;
+        column-gap: 15px;
+    }
+
+    .resume-items .item-left .info {
+        right: 25px;
+    }
+
+    .resume-items .item-right .info {
+        left: 25px;
+    }
+
+    62554
+
 }
+
 
 @media screen and (max-width: 480px){
 }

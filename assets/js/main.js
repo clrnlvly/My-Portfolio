@@ -290,7 +290,7 @@ document.addEventListener("mousemove", (e) => {
 });
 
 /**Cursor Hover Effect */
-const cursorHoverLinks = document.querySelectorAll("body a, .theme-btn, .lv-main-btn, .portfolio-card, .swiper-button-next, .swiper-button-prev, .swiper-pagination-bullet, .service-card, .contact-social-links li, .contact-form, .submit-btn, .menu-show-btn, .menu-hide-btn");
+const cursorHoverLinks = document.querySelectorAll("body a, .theme-btn, .lv-main-btn, .portfolio-card, .service-card, .contact-social-links li, .contact-form, .submit-btn, .menu-show-btn, .menu-hide-btn");
 
 cursorHoverLinks.forEach((cursorHoverLink) => {
    cursorHoverLink.addEventListener("mouseover", () => {
