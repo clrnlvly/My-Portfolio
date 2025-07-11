@@ -466,6 +466,35 @@ body{
     transition: .3s;
 }
 
+/*Tooltip*/
+.lv-main-btn[data-tooltip] {
+    position: relative;
+    cursor: pointer;
+}
+
+.lv-main-btn[data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%; /* place above the button */
+    left: 50%;
+    transform: translateX(50%);
+    background-color: hsla(175, 70%, 45%, 0.2);;
+    color: var(--color-01);
+    padding: 6px 10px;
+    font-size: 0.75rem;
+    font-style: italic;
+    white-space: nowrap;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease-in-out;
+    z-index: 10;
+}
+
+.lv-main-btn[data-tooltip]:hover::after {
+    opacity: 1;
+}
+
 
 /*Bottom Nav Menu*/
 .bottom-nav-container{
@@ -865,6 +894,13 @@ body{
     display: none;
 }
 
+.about-buttons {
+    display: flex;
+    justify-content: center; /* Aligns all buttons to the right */
+    gap: 1rem; /* Adds spacing between buttons */
+}
+
+
 .pro-list{
     position: relative;
     max-width: 100%;
@@ -881,7 +917,7 @@ body{
     justify-content: center;
     align-items: center;
     column-gap: 10px;
-    padding: 35px 25px;
+    padding: 15px 10px;
     text-align: left;
     border-radius: 5px;
 }
