@@ -1099,17 +1099,36 @@ body{
     row-gap: 50px;
 }
 
-.skill-card{
+.skill-card {
     position: relative;
     background: var(--card-bg);
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
     padding: 50px 25px;
     border-bottom: 5px solid var(--primary-color);
     border-radius: 10px;
+    width: 500px;
+    height: 450px;         /* Control the visible height */
+    overflow-y: auto;          /* Scroll if content overflows */
+    scroll-behavior: smooth;
 }
+
+.skill-card::-webkit-scrollbar {
+    width: 6px;
+}
+
+.skill-card::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.skill-card::-webkit-scrollbar-track {
+    background: transparent;
+}
+
 
 .skill-title{
     display: flex;
