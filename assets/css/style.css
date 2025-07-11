@@ -17,7 +17,7 @@
   --color-05: hsl(175, 80%, 60%); /* A brighter aqua for highlights */
 
   --body-color: hsl(176deg 97.99% 3.65%); /* Deep teal background */
-  --hover-color: hsl(var(--hue), var(--sat), calc(var(--light) + 5%)); /* Brighter on hover! */
+  --hover-color: hsl(var(--hue), var(--sat), calc(var(--light) - 10%)); /* Darker on hover */
 
   /* Backgrounds (with a glowing effect!) */
   --bottom-nav-bg: hsl(var(--hue), 50%, 30% / 0.7); /* Semi-transparent teal */
@@ -412,8 +412,14 @@ body{
 }
 
 .fill-btn{
+    color: var(--body-color);
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
+}
+
+.fill-btn:hover{
+    color: var(--body-color);
+    background: var(--hover-color);
 }
 
 .fill-btn a{
