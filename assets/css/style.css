@@ -997,6 +997,7 @@ body{
     display: none;
     opacity: 0;
     transition: opacity .3s ease;
+    height: auto;
 }
 
 .resume-tab-content.active{
@@ -1008,6 +1009,12 @@ body{
     background: var(--primary-color);
     width: 2px;
     height: 500px;
+}
+
+.resume-tab-content.experience .resume-line{
+    background: var(--primary-color);
+    width: 2px;
+    height: 830px;
 }
 
 .resume-items{
