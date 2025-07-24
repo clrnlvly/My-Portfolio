@@ -812,6 +812,23 @@ body{
     margin-bottom: 35px;
 }
 
+.avatar-info .what-i-do .typing {
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid var(--color-02);
+  animation: blinkCursor 0.7s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--color-02);
+  }
+}
+
+
 .home-scroll-btn{
     position: absolute;
     right: -5px;
@@ -1841,9 +1858,9 @@ body{
 
 /**Media Queries**/
 @media screen and (max-width: 1600px){
-    .cursor {
+    /* .cursor {
         display: none;
-    }
+    } */
 
     .lv-container {
         max-width: 1075px;

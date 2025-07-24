@@ -1,3 +1,33 @@
+/**Home Typing Effect*/
+  const typingElement = document.querySelector('.typing');
+  const words = ['software developer.', 'UI/UX designer.', 'freelancer.', 'tech enthusiast.'];
+  let wordIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function type() {
+    const currentWord = words[wordIndex];
+    const displayedText = currentWord.substring(0, charIndex);
+    typingElement.textContent = displayedText;
+
+    if (!isDeleting && charIndex < currentWord.length) {
+      charIndex++;
+      setTimeout(type, 100); // typing speed
+    } else if (isDeleting && charIndex > 0) {
+      charIndex--;
+      setTimeout(type, 50); // deleting speed
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        wordIndex = (wordIndex + 1) % words.length;
+      }
+      setTimeout(type, 1000); // pause before typing next word
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', type);
+
+
 /**Resume section tabs and tab content */
 const resumeTabs = document.querySelector(".resume-tabs");
 const resumePortfolioTabBtns = resumeTabs.querySelectorAll(".tab-btn");
