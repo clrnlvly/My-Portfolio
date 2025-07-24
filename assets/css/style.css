@@ -987,6 +987,8 @@ body{
 
 .resume-tabs .tab-btn:hover{
     color: var(--hover-color);
+    padding: 12px 15px;
+    background: var(--card-bg);
 }
 
 .resume-tabs .tab-btn i{
