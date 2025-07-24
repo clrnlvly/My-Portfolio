@@ -411,13 +411,21 @@ body{
     border: 2px solid var(--color-01);
 }
 
-.fill-btn{
+.fill-btn, .submit-btn{
+    width: fit-content;
+    padding: 14px 30px;
+    border-radius: 35px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform .3s ease;
+    transform-origin: center;
     color: var(--body-color);
     background: var(--primary-color);
     border: 2px solid var(--primary-color);
 }
 
-.fill-btn:hover{
+.fill-btn:hover, .submit-btn:hover{
+    transform: rotate(-3deg) scale(1.05);
     color: var(--body-color);
     background: var(--hover-color);
 }
@@ -872,19 +880,55 @@ body{
 }
 
 /*About*/
-.about-img{
-    position: relative;
-    width: 35%;
-    display: flex;  
-    justify-content: center;
-    align-items: center;
-    pointer-events: none;
+.about-img {
+  position: relative;
+  width: 35%;
+  aspect-ratio: 1 / 1; /* ensures a square aspect ratio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.about-img img{
-    width: 100%;
-    border-radius: 15px;
+.about-img .flip-card {
+  width: 100%;
+  height: 100%;
+  perspective: 1000px;
 }
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease-in-out;
+  cursor: pointer;
+}
+
+.flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-front,
+.flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px; /* match .about-img image rounding */
+  overflow: hidden;
+}
+
+.flip-front img,
+.flip-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+}
+
 
 .about-details{
     width: 65%;
@@ -928,22 +972,54 @@ body{
     margin: 38px 0;
 }
 
-.pro-card{
-    background: var(--card-bg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    column-gap: 10px;
-    padding: 15px 10px;
-    text-align: left;
-    border-radius: 5px;
+.pro-card-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 2px; /* border thickness */
+  border-radius: 5px;
+  overflow: hidden; /* clips the gradient edges */
 }
 
-.pro-card span{
-    color: var(--primary-color);
-    font-size: 2.75rem;
-    font-weight: var(--font-bold);
+.pro-card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%; left: -50%;
+  width: 200%; height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff3ca6,
+    #3cffac,
+    #3c84ff,
+    #ff3ca6
+  );
+  animation: rotateBorder 8s linear infinite;
 }
+
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pro-card {
+  background: var(--card-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  padding: 15px 20px;
+  text-align: left;
+  border-radius: 5px;
+  position: relative;
+  z-index: 1;
+}
+
+.pro-card span {
+  color: var(--primary-color);
+  font-size: 2.75rem;
+  font-weight: var(--font-bold);
+}
+
 
 .pro-card p{
     color: var(--color-02);
@@ -1120,95 +1196,44 @@ body{
     max-width: 100%;
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 50px;
     row-gap: 50px;
 }
 
 .skill-card {
-    position: relative;
-    background: var(--card-bg);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    padding: 50px 25px;
-    border-bottom: 5px solid var(--primary-color);
-    border-radius: 10px;
-    width: 500px;
-    height: 450px;         /* Control the visible height */
-    overflow-y: auto;          /* Scroll if content overflows */
-    scroll-behavior: smooth;
+  width: 120px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s;
 }
 
-.skill-card::-webkit-scrollbar {
-    width: 6px;
+.skill-card:hover {
+  transform: scale(1.05);
 }
 
-.skill-card::-webkit-scrollbar-thumb {
-    background-color: var(--primary-color);
-    border-radius: 10px;
+.skill-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
-.skill-card::-webkit-scrollbar-track {
-    background: transparent;
+.skill-title i {
+  font-size: 32px;
+  color: #333;
 }
 
-
-.skill-title{
-    display: flex;
-    align-items: center;
-    column-gap: 10px;
-    margin-bottom: 50px;
+.skill-title span {
+  font-size: 16px;
+  font-weight: 500;
+  color: #555;
+  text-transform: capitalize;
 }
 
-.skill-title i{
-    font-size: 2.15rem;
-    color: var(--primary-color);
-}
-
-.skill-title span{
-    color: var(--color-02);
-    font-size: var(--medium-font-size);
-    font-weight: var(--font-semi-bold);
-}
-
-.skill-categories{
-    display: grid;
-    place-items: start;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 65px;
-    row-gap: 35px;
-    padding:  0 50px;
-}
-
-.skill{
-    display: flex;
-    column-gap: 15px;
-}
-
-.skill-info{
-    display: flex;
-    flex-direction: column;
-    row-gap: 5px;
-}
-
-.skill i{
-    color: var(--primary-color);
-    font-size: 1.35rem;
-}
-
-.skill-info h5{
-    color: var(--color-02);
-    font-size: var(--h5-font-size);
-    font-weight: var(--font-semi-bold);
-}
-
-.skill-info span{
-    color: var(--color-04);
-    font-size: var(--tiny-font-size);
-}
 
 /*Services*/
 .services-container{
@@ -1640,6 +1665,10 @@ body{
     border-radius: 10px;
 }
 
+.contact-icon:hover{
+    color: var(--hover-color);
+}
+
 .contact-method{
     display: flex;
     flex-direction: column;
@@ -1702,15 +1731,21 @@ body{
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.contact-social-links li:hover{
+    transform: scale(1.05);
 }
 
 .contact-social-links li a{
     color: var(--primary-color);
-    transition: .3s;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .contact-social-links li:hover a{
     color: var(--hover-color);
+    transform: scale(1.05);
 }
 
 .contact-form-container{
@@ -1791,20 +1826,6 @@ body{
 .contact-form-alert i{
     color: var(--primary-color);
     font-size: 1.25rem;
-}
-
-.submit-btn {
-    color: var(--hover-color);
-    background: var(--body-color);
-    border: 2px solid transparent; 
-    transition: background-color 0.3s, color 0.3s;
-    
-}
-
-.submit-btn:hover{
-    background: var(--primary-color);
-    color: var(--body-color);
-    cursor: pointer;
 }
 
 

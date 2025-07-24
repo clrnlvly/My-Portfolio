@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lovely's Portfolio</title>
 
-    <!-- Swiper CSS -->
     <!-- Main Style Sheet -->
      <link rel="stylesheet" href="assets/css/style.css">
     <!-- Remixicon -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css">
     <!-- Scroll Reveal JS-->
+     <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
 <body>
@@ -118,7 +118,16 @@
                 </div>
                 <div class="section-content">
                     <div class="about-img">
-                        <img src="assets/images/profile-img.png" alt="">
+                        <div class="flip-card">
+                          <div class="flip-inner" onclick="this.classList.toggle('flipped')">
+                            <div class="flip-front">
+                              <img src="assets/images/gradcap_wbg.png" alt="Graduation Cap">
+                            </div>
+                            <div class="flip-back">
+                              <img src="assets/images/profile-img.png" alt="Profile Image">
+                            </div>
+                          </div>
+                        </div>
                     </div>
                     <div class="about-details">
                         <div class="about-info">
@@ -129,18 +138,27 @@
                         </div>
 
                         <div class="pro-list">
-                            <div class="pro-card">
-                                <span>04+</span>
-                                <p>Projects Completed</p>
+                            <div class="pro-card-wrapper">
+                                <div class="pro-card">
+                                    <span>04+</span>
+                                    <p>Projects Completed</p>    
+                                </div>
                             </div>
-                            <div class="pro-card">
-                                <span>08+</span>
-                                <p>Languages Exploring</p>
+                            
+                            <div class="pro-card-wrapper">
+                                <div class="pro-card">
+                                    <span>08+</span>
+                                    <p>Languages Exploring</p>
+                                </div>
                             </div>
-                            <div class="pro-card">
-                                <span>∞</span>
-                                <p>Willingness to Learn</p>
+
+                            <div class="pro-card-wrapper">
+                                <div class="pro-card">
+                                    <span>∞</span>
+                                    <p>Willingness to Learn</p>
+                                </div>
                             </div>
+                            
                         </div>
                         <div class="about-buttons">
                             <div class="lv-main-btn fill-btn">
@@ -243,68 +261,63 @@
                     <div class="resume-tab-content skills">
                         <div class="skill-container">
  
-                            <!-- Front-End Development -->
                             <div class="skill-card">
                                 <div class="skill-title">
                                     <i class="ri-layout-grid-fill"></i>
-                                    <span>Front-End Development</span>
-                                </div>
-                                <div class="skill-categories">
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>HTML</h5><span>Advanced</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>CSS</h5><span>Advanced</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>JavaScript</h5><span>Advanced</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Materialize CSS</h5><span>Intermediate</span></div></div>
+                                    <span>github</span>
                                 </div>
                             </div>
 
-                            <!-- Back-End Development -->
                             <div class="skill-card">
                                 <div class="skill-title">
-                                    <i class="ri-server-fill"></i>
-                                    <span>Back-End Development</span>
-                                </div>
-                                <div class="skill-categories">
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>PHP</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Python</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Flask</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>MySQL (phpMyAdmin)</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Firebase Realtime DB</h5><span>Intermediate</span></div></div>
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
                                 </div>
                             </div>
 
-
-                            <!-- Desktop & Mobile Development -->
                             <div class="skill-card">
                                 <div class="skill-title">
-                                    <i class="ri-device-line"></i>
-                                    <span>Desktop & Mobile Development</span>
-                                </div>
-                                <div class="skill-categories">
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Java (Android)</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>.NET Framework</h5><span>Intermediate</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>MS SQL Server</h5><span>Intermediate</span></div></div>
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
                                 </div>
                             </div>
 
-                            <!-- Development Tools -->
                             <div class="skill-card">
                                 <div class="skill-title">
-                                    <i class="ri-tools-fill"></i>
-                                    <span>Development Tools & Workflow</span>
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
                                 </div>
-                                <div class="skill-categories">
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Git & GitHub</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Sourcetree</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>phpMyAdmin</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>XAMPP</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Postman</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>VS Code</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Eclipse</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Android Studio</h5><span>Proficient</span></div></div>
-                                    <div class="skill"><i class="ri-checkbox-circle-fill"></i><div class="skill-info"><h5>Hostinger</h5><span>Proficient</span></div></div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-title">
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-title">
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-title">
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
+                                </div>
+                            </div>
+
+                            <div class="skill-card">
+                                <div class="skill-title">
+                                    <i class="ri-layout-grid-fill"></i>
+                                    <span>github</span>
                                 </div>
                             </div>
                             
+
                         </div>
                     </div>
 
@@ -794,9 +807,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Swiper JS-->
-    <script src="assets/js/swiper.bundle.min.js"></script>
 
     <!--Email JS-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
