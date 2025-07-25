@@ -1109,7 +1109,7 @@ body{
 .resume-tab-content.experience .resume-line{
     background: var(--primary-color);
     width: 2px;
-    height: 1000px;
+    height: 755px;
 }
 
 .resume-items{
@@ -1201,19 +1201,57 @@ body{
     row-gap: 50px;
 }
 
+.skill-card-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 3px; /* thickness of animated border */
+  border-radius: 14px; /* slightly larger than .skill-card */
+  overflow: hidden;
+  z-index: 0;
+  transition: transform 0.3s;
+}
+
+.skill-card-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 0deg,
+    #ff3ca6,
+    #3cffac,
+    #3c84ff,
+    #ff3ca6
+  );
+  animation: rotateBorder 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes rotateBorder {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .skill-card {
   width: 120px;
   padding: 20px;
-  background: var(--body-color);
+  background: var(--footer-bg);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s;
+  position: relative;
+  z-index: 1; /* sits above the rotating gradient */
 }
 
-.skill-card:hover {
+.skill-card-wrapper:hover {
   transform: scale(1.05);
+  transition: transform .3s ease;
 }
+
 
 .skill-title {
   display: flex;
@@ -1246,7 +1284,7 @@ body{
 .skill-bar {
   width: 100%;
   height: 8px;
-  background-color: #ddd;
+  background-color: #b9b5b5;
   border-radius: 4px;
   margin-top: 10px;
   overflow: hidden;
@@ -1480,6 +1518,8 @@ body{
 
 .portfolio-tabs .tab-btn:hover{
     color: var(--hover-color);
+    background: var(--card-bg);
+    padding: 12px 25px;
 }
 
 .portfolio-tabs .tab-btn.active{
