@@ -83,7 +83,7 @@
     --color-04: hsl(var(--hue), 15%, 25%); /* Dark gray (was light gray) */
     --color-05: hsl(175, 80%, 40%); /* A darker aqua for highlights */
 
-    --body-color: hsl(176deg 97.99% 96.35%); /* Light background (was deep teal) */
+    --body-color: hsl(177, 20%, 79%); /* Light background (was deep teal) */
     --hover-color: hsl(var(--hue), var(--sat), calc(var(--light) - 5%)); /* Darker on hover */
 
     /* Backgrounds */
@@ -1641,7 +1641,7 @@ body{
 
 .portfolio-modal {
     position: relative;
-    background: var(--color-03);
+    background: var(--card-bg);
     max-width: 650px;
     margin: 75px 25px;
     padding: 50px 45px;
@@ -1661,7 +1661,7 @@ body{
     top: 15px;
     right: 15px;
     font-size: 1.5rem;
-    color: var(--primary-color);
+    color: var(--color-02);
     cursor: pointer;
 }
 
@@ -1713,8 +1713,8 @@ body{
     width: 170px; /* Equal width for both buttons */
     text-align: center;
     padding: 10px 10px;
-    background-color: var(--card-bg);
-    color: white;
+    background-color: var(--color-02);
+    color: var(--card-bg);
     text-decoration: none;
     border-radius: 8px;
     font-weight: 600;
@@ -1724,7 +1724,6 @@ body{
 }
 
 .portfolio-modal .portfolio-modal-link.button-link:hover {
-    color: var(--primary-color);
     transform: scale(1.05);
 }
 
