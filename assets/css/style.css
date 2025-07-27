@@ -1572,17 +1572,14 @@ body{
 }
 
 .portfolio-card .card-info span{
-    color: var(--color-04);
+    color: var(--primary-color);
     font-size: var(--tiny-font-size);
     font-weight: var(--font-regular);
     text-transform: uppercase;
 }
 
-.portfolio-card .card-info h4{
-    color: var(--color-02);
-    font-size: var(--medium-font-size);
-    font-weight: var(--font-medium);
-    margin-top: 5px;
+.portfolio-card .card-info span:hover {
+    color: var(--hover-color);
 }
 
 .portfolio-card .card-info i{
@@ -1688,6 +1685,17 @@ body{
     font-weight: var(--font-regular);
     text-align: justify;
 }
+
+.portfolio-modal .portfolio-modal-link {
+    color: var(--primary-color);
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.portfolio-modal .portfolio-modal-link:hover{
+    color: var(--hover-color);
+}
+
 
 /**ContactMe**/
 .contact-container{
@@ -2531,4 +2539,13 @@ body{
 
 
 
+}
+
+
+/* New */
+@media (forced-colors: active) {
+  body {
+    background: Canvas;
+    color: CanvasText;
+  }
 }
