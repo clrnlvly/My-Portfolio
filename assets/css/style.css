@@ -2133,10 +2133,9 @@ body{
         margin-top: 20px;
     }
 
-    .portfolio-modal .modal-img {
-        padding: 15px;
-        margin-top: 0px;
-    }
+     .portfolio-modal .modal-img {
+       display: none;
+     }
 
     .portfolio-modal .modal-content .modal-title {
         font-size: var(--h5-font-size);
@@ -2430,9 +2429,7 @@ body{
   }
 
 
-  .portfolio-modal .modal-img {
-    display: none;
-  }
+
 
 }
 
