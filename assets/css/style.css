@@ -2066,10 +2066,13 @@ body{
 
 
     .skill-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
 
+    .portfolio-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
     .portfolio-card {
         width: 250px;
         height: 200px;
@@ -2212,6 +2215,55 @@ body{
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 480px){
