@@ -1951,7 +1951,7 @@ body{
 
 
 @media screen and (max-width: 768px) {
-        .cursor {
+    .cursor {
         display: none;
     }
 
