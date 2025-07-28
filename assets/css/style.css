@@ -2044,29 +2044,29 @@ body{
     }
 
     .resume-items .item .info {
-    width: 140px; /* Overwrites 185px */
-    column-gap: 15px;
-}
+        width: 140px;
+        column-gap: 15px;
+    }
 
-.resume-items .item-left .info {
-    right: 20px; /* Overwrites 25px */
-}
+    .resume-items .item-left .info {
+        right: 20px;
+    }
 
-.resume-items .item-right .info {
-    left: 45px; /* Overwrites 75px */
-}
+    .resume-items .item-right .info {
+        left: 45px;
+    }
 
-.resume-items .item .info i {
-    display: none;
-}
+    .resume-items .item .info i {
+        display: none;
+    }
 
-.resume-items .item .info p {
-    white-space: break-spaces;
-}
+    .resume-items .item .info p {
+        white-space: break-spaces;
+    }
 
 
     .skill-container {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
 
 
