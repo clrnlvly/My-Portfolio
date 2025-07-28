@@ -1399,7 +1399,7 @@ body{
 }
 
 .portfolio-modal-backdrop {
-    z-index: var(--z-overlay);
+    z-index: var(--z-max);
     position: fixed;
     background: var(--modal-backdrop-bg);
     backdrop-filter: blur(10px);
@@ -2128,13 +2128,16 @@ body{
         border-radius: 12px;
     }
 
+    .portfolio-modal.active {
+        margin-top: 100px;
+    }
     .portfolio-modal .modal-content {
         row-gap: 10px;
         margin-top: 20px;
     }
 
      .portfolio-modal .modal-img {
-       display: none;
+       display: none;   
      }
 
     .portfolio-modal .modal-content .modal-title {
