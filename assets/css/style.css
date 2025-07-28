@@ -1951,6 +1951,14 @@ body{
 
 
 @media screen and (max-width: 768px) {
+        .cursor {
+        display: none;
+    }
+
+    .cursor.hidden {
+        display: none;
+    }
+
     :root {
         --h1-font-size: 1.85rem;
         --h2-font-size: 1.6rem;
@@ -2202,14 +2210,6 @@ body{
 
 
 @media screen and (max-width: 480px){
-    .cursor {
-        display: none;
-    }
-
-    .cursor.hidden {
-        display: none;
-    }
-
 
     :root {
         --h1-font-size: 1.75rem;   /* ~28px */
