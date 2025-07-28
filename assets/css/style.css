@@ -2069,184 +2069,193 @@ body{
     .portfolio-container {
         grid-template-columns: repeat(1, 1fr);
     }
-
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media screen and (max-width: 480px){
-
-    :root {
-        --h1-font-size: 1.75rem;   /* ~28px */
-        --h2-font-size: 1.5rem;    /* ~24px */
-        --h3-font-size: 1.3rem;    /* ~21px */
-        --h4-font-size: 1.1rem;    /* ~18px */
-        --h5-font-size: 0.95rem;   /* ~15px */
-
-        --xlarge-font-size: 1rem;      /* ~16px */
-        --large-font-size: 0.95rem;    /* ~15px */
-        --medium-font-size: 0.9rem;    /* ~14px */
-        --base-font-size: 0.875rem;    /* ~14px */
-        --small-font-size: 0.825rem;   /* ~13px */
-        --tiny-font-size: 0.75rem;     /* ~12px */
-  }
-
-  .lv-container {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-
-  .lv-header {
-    padding: 15px 0;
-  }
-
-  .avatar-img {
-    width: 200px;
-    height: 200px;
-
-  }
-
-  .header-btns {
-    column-gap: 15px;
-  }
-
-  .home-container .lv-wrapper {
-    flex-direction: column-reverse;
-  }
-
-  .home-social {
-    position: relative;
     
-  }
+    .portfolio-card {
+        width: 250px;
+        height: 200px;
+    }
 
-  .home-social span {
-    display: none;
-  }
+    .portfolio-modal {
+        max-width: 70%;
+        margin: 50px 15px;
+        padding: 30px 20px;
+        border-radius: 12px;
+    }
 
-  .home-social .social-line {
-    display: none;
-  }
+    .portfolio-modal .modal-content {
+        row-gap: 10px;
+        margin-top: 20px;
+    }
 
-  .home-social .social-icons {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    margin-top: 35px;
-  }
+    .portfolio-modal .modal-img {
+        padding: 15px;
+        margin-top: 0px;
+    }
 
-  .home-scroll-btn {
-    display: none;
-  }
+    .portfolio-modal .modal-content .modal-title {
+        font-size: var(--h5-font-size);
+    }
 
-  .bottom-nav {
-    width: 100%;
-    padding: 0 20px;
-  }
+    .portfolio-modal .modal-content .modal-description {
+        font-size: var(--small-font-size);
+        max-width: 500px;
+    }
 
-  .bottom-nav .menu {
-    padding: 17px 25px;
-    justify-content: space-between;
-    column-gap: 7px;
-    width: 100%;
-  }
+    .portfolio-modal .portfolio-modal-link.button-link {
+        width: 150px;
+    }
 
-  .bottom-nav .menu li a i {
-    font-size: 1.15rem;
-    padding: 7px;
-  }
+    .contact-container {
+        column-gap: 0;
+    }
 
-  .bottom-nav .menu-hide-btn {
-    font-size: 1.25rem;
-  }
+    .contact-info h3 {
+        font-size: var(--small-font-size);
+        margin-bottom: 25px;
+        text-align: center;
+    }
 
-  .menu-show-btn {
-    width: 75px;
-    height: 45px;
-    row-gap: 4px;
-  }
+    .contact-details {
+        row-gap: 30px;
+        margin-bottom: 30px;
+    }
 
-  .menu-show-btn .bar-01, 
-  .menu-show-btn .bar-02 {
-    width: 37px;
-    height: 3px;
-  }
+    .contact-item {
+        column-gap: 15px;
+    }
 
-  .pro-list {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 2fr));
-  }
+    .contact-icon {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem;
+    }
 
-  .pro-card {
-    flex-direction: column;
-    row-gap: 3px;
-  }
+    .contact-method h4 {
+        font-size: var(--small-font-size);
+    }
 
-  .pro-card p {
-    text-align: center;
-  }
+    .contact-method a span {
+        font-size: var(--tiny-font-size);
+    }
 
-  .about-buttons {
-    column-gap: 15px;
-  }
+    .contact-social-links {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
 
-  
+    .contact-social-links li {
+        width: 55px;
+        height: 55px;
+        font-size: 1.3rem;
+    }
 
-  .skill-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+    .contact-form-container {
+        padding: 30px 40px;
+        border-radius: 25px;
+        width: 80%;
+    }
 
+    .contact-form-container h2 {
+        font-size: var(--h4-font-size);
+        text-align: center;
+    }
 
-  .card-with-modal {
-    width: 100%;
-  }
+    .contact-form-container p {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .contact-form-container form .input-group input,
+    .contact-form-container form .input-group textarea {
+      padding: 10px 12px;
+      font-size: var(--tiny-font-size);
+    }
+
+    .contact-form-container form .input-group textarea {
+      height: 150px;
+    }
+
+    .contact-form-container form .send-message {
+      flex-direction: column;
+      row-gap: 15px;
+      align-items: stretch;
+    }
+
+    .contact-form-container .input-group button {
+      font-size: var(--tiny-font-size);
+      display: inline-block;
+      margin: 0 auto;
+      text-align: center;
+      width: auto;
+    }
+
+    .contact-form-alert span {
+      font-size: var(--tiny-font-size);
+    }
+
+    .contact-form-alert i {
+      font-size: 1rem;
+    }
+
+    .lv-footer {
+      padding-top: 25px;
+      padding-bottom: 120px;
+    }
+
+    .footer-menu {
+      column-gap: 10px;
+    }
+
+    .to-top-btn.active {
+      right: 20px;
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
