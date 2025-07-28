@@ -1399,7 +1399,7 @@ body{
 }
 
 .portfolio-modal-backdrop {
-    z-index: var(--z-max);
+    z-index: var(--z-overlay);
     position: fixed;
     background: var(--modal-backdrop-bg);
     backdrop-filter: blur(10px);
@@ -2126,6 +2126,10 @@ body{
         margin: 50px 15px;
         padding: 30px 20px;
         border-radius: 12px;
+    }
+
+    .portfolio-modal-backdrop {
+        align-items: center;
     }
 
     .portfolio-modal .modal-content {
