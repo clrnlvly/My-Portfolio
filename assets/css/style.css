@@ -2206,9 +2206,10 @@ body{
         display: none;
     }
 
-    .cursor-circle {
+    .cursor.hidden {
         display: none;
     }
+
 
     :root {
         --h1-font-size: 1.75rem;   /* ~28px */
