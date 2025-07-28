@@ -1654,7 +1654,7 @@ body{
 .contact-form-container{
     position: relative;
     background: var(--card-bg);
-    width: 80%;
+    width: 100%;
     padding: 50px;
     border-radius: 35px;
 }
@@ -2157,7 +2157,6 @@ body{
     .contact-form-container {
         padding: 30px 30px;
         border-radius: 25px;
-        width: 80%;
     }
 
     .contact-form-container h2 {
@@ -2213,55 +2212,6 @@ body{
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 @media screen and (max-width: 480px){
