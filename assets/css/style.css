@@ -2205,7 +2205,11 @@ body{
     .cursor {
         display: none;
     }
-    
+
+    .cursor-circle {
+        display: none;
+    }
+
     :root {
         --h1-font-size: 1.75rem;   /* ~28px */
         --h2-font-size: 1.5rem;    /* ~24px */
