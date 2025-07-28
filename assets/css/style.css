@@ -2128,9 +2128,6 @@ body{
         border-radius: 12px;
     }
 
-    .portfolio-modal.active {
-        margin-top: 100px;
-    }
     .portfolio-modal .modal-content {
         row-gap: 10px;
         margin-top: 20px;
