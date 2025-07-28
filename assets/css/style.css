@@ -2109,6 +2109,7 @@ body{
 
     .contact-container {
         column-gap: 0;
+        margin-top: 0;
     }
 
     .contact-info h3 {
@@ -2119,9 +2120,8 @@ body{
 
     .contact-details {
         flex-direction: column;   /* stack items vertically */
-    row-gap: 60px;            /* vertical spacing between items */
-    justify-content: center;  /* optional: center within container */
-    align-items: center;      /* horizontally center the items */
+        row-gap: 30px; 
+        margin-bottom: 50px;           /* vertical spacing between items */
     }
 
     .contact-item {
@@ -2155,19 +2155,17 @@ body{
     }
 
     .contact-form-container {
-        padding: 30px 40px;
+        padding: 30px 30px;
         border-radius: 25px;
         width: 80%;
     }
 
     .contact-form-container h2 {
         font-size: var(--h4-font-size);
-        text-align: center;
     }
 
     .contact-form-container p {
         text-align: center;
-        margin-bottom: 30px;
     }
 
     .contact-form-container form .input-group input,
@@ -2177,12 +2175,11 @@ body{
     }
 
     .contact-form-container form .input-group textarea {
-      height: 150px;
+      height: 100px;
     }
 
     .contact-form-container form .send-message {
       flex-direction: column;
-      row-gap: 15px;
       align-items: stretch;
     }
 
