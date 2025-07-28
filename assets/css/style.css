@@ -2165,8 +2165,10 @@ body{
     }
 
     .contact-details {
-        row-gap: 30px;
-        margin-bottom: 30px;
+        flex-direction: column;   /* stack items vertically */
+    row-gap: 60px;            /* vertical spacing between items */
+    justify-content: center;  /* optional: center within container */
+    align-items: center;      /* horizontally center the items */
     }
 
     .contact-item {
