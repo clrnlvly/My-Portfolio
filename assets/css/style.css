@@ -1100,7 +1100,7 @@ body{
 .resume-tab-content.experience .resume-line{
     background: var(--primary-color);
     width: 2px;
-    height: 755px;
+    height: 380px;
 }
 
 .resume-items{
