@@ -1,6 +1,6 @@
 /**Home Typing Effect*/
   const typingElement = document.querySelector('.typing');
-  const words = ['software developer.', 'UI/UX designer.', 'freelancer.', 'tech enthusiast.'];
+  const words = ['software developer.', 'UI/UX designer.', 'tech support.', 'tech enthusiast.'];
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
