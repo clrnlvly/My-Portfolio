@@ -1,10 +1,10 @@
 /**Home Typing Effect*/
   const typingElement = document.querySelector('.typing');
   const words = [
-  'ERP technical support.',
-  'AI-assisted bug fixing.',
+  'ERP systems.',
   'software development.',
   'UI/UX design.',
+  'AI-assisted debugging.',
   ''];
   let wordIndex = 0;
   let charIndex = 0;
