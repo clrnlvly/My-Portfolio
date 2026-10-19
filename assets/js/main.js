@@ -4,7 +4,7 @@
   'ERP systems',
   'software development',
   'UI/UX design',
-  'AI debugging & fixes',
+  'AI debugging & fixes ',
   ''];
   let wordIndex = 0;
   let charIndex = 0;
